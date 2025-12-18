@@ -12,96 +12,96 @@
 </p>
 
 <p align="center">
-  <strong>Sistema de Gestión de Premios y Apremios</strong>
+  <strong>Rewards and Penalties Management System</strong>
 </p>
 
 ---
 
-## 📋 Descripción
+## 📋 Description
 
-**PREMI+** es una aplicación Flutter multiplataforma diseñada para la gestión integral de premios y apremios empresariales. Permite el seguimiento completo del ciclo de vida de los registros, desde la solicitud inicial hasta la facturación final.
+**PREMI+** is a multi-platform Flutter application designed for comprehensive management of enterprise rewards and penalties. It enables complete lifecycle tracking of records, from the initial request to the final invoicing.
 
-## ✨ Características Principales
+## ✨ Key Features
 
-- 🔐 **Autenticación segura** con Firebase Auth
-- 📊 **Dashboard interactivo** con visualización de datos en tiempo real
-- 📝 **Gestión completa de registros**:
-  - Creación de nuevos registros
-  - Seguimiento de estados (Solicitado, Respuesta, Réplica, Facturado)
-  - Carga de archivos adjuntos
-- 🔍 **Búsqueda y filtrado** avanzado de registros
-- 📱 **Diseño responsive** para Web y dispositivos móviles
-- 🎨 **Tema personalizable** con Material Design 3
-- 📈 **Reportes y estadísticas** con gráficos interactivos
+- 🔐 **Secure authentication** with Firebase Auth
+- 📊 **Interactive dashboard** with real-time data visualization
+- 📝 **Complete record management**:
+  - Create new records
+  - Track statuses (Requested, Response, Reply, Invoiced)
+  - Upload file attachments
+- 🔍 **Advanced search and filtering** of records
+- 📱 **Responsive design** for Web and mobile devices
+- 🎨 **Customizable theme** with Material Design 3
+- 📈 **Reports and statistics** with interactive charts
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Tech Stack
 
-| Tecnología | Uso |
-|------------|-----|
-| **Flutter 3.x** | Framework de desarrollo multiplataforma |
-| **Dart 3.x** | Lenguaje de programación |
-| **Firebase Auth** | Autenticación de usuarios |
-| **Firebase Analytics** | Analíticas de uso |
-| **Google Apps Script** | Backend API y almacenamiento de datos |
-| **flutter_bloc** | Gestión de estado |
-| **fl_chart** | Visualización de gráficos |
+| Technology | Usage |
+|------------|-------|
+| **Flutter 3.x** | Multi-platform development framework |
+| **Dart 3.x** | Programming language |
+| **Firebase Auth** | User authentication |
+| **Firebase Analytics** | Usage analytics |
+| **Google Apps Script** | Backend API and data storage |
+| **flutter_bloc** | State management |
+| **fl_chart** | Chart visualization |
 
-## 🏗️ Arquitectura del Proyecto
+## 🏗️ Project Architecture
 
 ```
 lib/
-├── bloc/                    # BLoC para gestión de estado
+├── bloc/                    # BLoC for state management
 │   ├── main_bloc.dart
 │   ├── main_event.dart
 │   └── main_state.dart
-├── desplegables/           # Modelos de datos desplegables
-├── dialogs/                # Diálogos de la aplicación
-├── Home/                   # Página principal
-├── login/                  # Módulo de autenticación
+├── desplegables/           # Dropdown data models
+├── dialogs/                # Application dialogs
+├── Home/                   # Home page
+├── login/                  # Authentication module
 │   ├── model/
 │   └── view/
-├── nuevo/                  # Creación de nuevos registros
-├── resources/              # Recursos y utilidades
-│   ├── env_config.dart     # Configuración de variables de entorno
+├── nuevo/                  # New record creation
+├── resources/              # Resources and utilities
+│   ├── env_config.dart     # Environment variables configuration
 │   └── ...
-├── Todos/                  # Listados y gestión de registros
-├── user/                   # Modelo de usuario
-├── users/                  # Gestión de usuarios
-├── vista/                  # Vistas adicionales
-├── firebase_options.dart   # Configuración de Firebase
-├── main.dart              # Punto de entrada
-└── router.dart            # Configuración de rutas
+├── Todos/                  # Record listings and management
+├── user/                   # User model
+├── users/                  # User management
+├── vista/                  # Additional views
+├── firebase_options.dart   # Firebase configuration
+├── main.dart              # Entry point
+└── router.dart            # Route configuration
 ```
 
-## 🚀 Instalación
+## 🚀 Installation
 
-### Prerrequisitos
+### Prerequisites
 
 - [Flutter SDK](https://flutter.dev/docs/get-started/install) (^3.7.2)
 - [Dart SDK](https://dart.dev/get-dart) (^3.7.2)
-- Cuenta de [Firebase](https://firebase.google.com/)
-- [Google Apps Script](https://script.google.com/) configurado
+- [Firebase](https://firebase.google.com/) account
+- [Google Apps Script](https://script.google.com/) configured
 
-### Pasos de Instalación
+### Installation Steps
 
-1. **Clonar el repositorio**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/jozzer182/PREMI.git
    cd PREMI
    ```
 
-2. **Instalar dependencias**
+2. **Install dependencies**
    ```bash
    flutter pub get
    ```
 
-3. **Configurar variables de entorno**
+3. **Configure environment variables**
    ```bash
    cp .env.example .env
    ```
-   Edita el archivo `.env` con tus credenciales reales.
+   Edit the `.env` file with your actual credentials.
 
-4. **Ejecutar la aplicación**
+4. **Run the application**
    ```bash
    # Web
    flutter run -d chrome
@@ -113,11 +113,11 @@ lib/
    flutter run -d ios
    ```
 
-## ⚙️ Configuración
+## ⚙️ Configuration
 
-### Variables de Entorno
+### Environment Variables
 
-Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
+Create a `.env` file in the project root with the following variables:
 
 ```env
 # Firebase Configuration
@@ -135,45 +135,45 @@ API_LOGIN=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
 
 ### Firebase Setup
 
-1. Crea un proyecto en [Firebase Console](https://console.firebase.google.com/)
-2. Habilita Authentication con Email/Password
-3. Copia las credenciales de configuración web al archivo `.env`
+1. Create a project in [Firebase Console](https://console.firebase.google.com/)
+2. Enable Authentication with Email/Password
+3. Copy the web configuration credentials to the `.env` file
 
 ### Google Apps Script Setup
 
-1. Crea los scripts necesarios en [Google Apps Script](https://script.google.com/)
-2. Despliega como aplicación web
-3. Copia las URLs de despliegue al archivo `.env`
+1. Create the necessary scripts in [Google Apps Script](https://script.google.com/)
+2. Deploy as web application
+3. Copy the deployment URLs to the `.env` file
 
-## 📦 Dependencias Principales
+## 📦 Main Dependencies
 
 ```yaml
 dependencies:
-  flutter_dotenv: ^5.1.0      # Variables de entorno
+  flutter_dotenv: ^5.1.0      # Environment variables
   firebase_core: ^3.13.0      # Firebase Core
-  firebase_auth: ^5.5.2       # Autenticación
-  flutter_bloc: ^9.1.0        # Gestión de estado
-  fl_chart: ^0.64.0           # Gráficos
-  http: ^1.1.0                # Peticiones HTTP
-  file_picker: ^10.1.2        # Selección de archivos
-  intl: ^0.20.2               # Internacionalización
+  firebase_auth: ^5.5.2       # Authentication
+  flutter_bloc: ^9.1.0        # State management
+  fl_chart: ^0.64.0           # Charts
+  http: ^1.1.0                # HTTP requests
+  file_picker: ^10.1.2        # File selection
+  intl: ^0.20.2               # Internationalization
 ```
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-Las contribuciones son bienvenidas. Por favor:
+Contributions are welcome. Please:
 
-1. Haz fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+This project is under the MIT License. See the `LICENSE` file for more details.
 
-## 📬 Contacto
+## 📬 Contact
 
 **José Zarabanda**
 
@@ -184,5 +184,5 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ---
 
 <p align="center">
-  Hecho con ❤️ usando Flutter
+  Made with ❤️ using Flutter
 </p>
